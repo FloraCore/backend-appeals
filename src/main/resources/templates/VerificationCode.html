@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>验证码</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<div style="padding: 10px; background-color: #393D49;">
+    <h2 style="color: #FFFFFF; margin: 0px;">申诉系统 - 验证码</h2>
+</div>
+<div style="padding-top: 10px; padding-bottom: 10px;">
+    <div style="background-color: snow; padding: 20px;">
+        <div>
+            <h2>验证码如下：</h2>
+            <div>
+                <h2 th:text="${verifyCode}"></h2>
+                <h6>
+                    注意：此操作可能会修改您的密码，获取您的2FA二维码等个人信息。如非本人操作，请及时登录并修改密码以保证帐户安全！</h6>
+                <h6>（工作人员不会向你索取此验证码，请勿泄漏！)</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding: 10px; text-align: center; background-color: #2F4056;">
+    <p style="margin: 0px; color: #FFFFFF;">© 2023 xLikeWATCHDOG.</p>
+</div>
+
+</body>
+
+</html>

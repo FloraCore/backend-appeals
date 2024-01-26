@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.kinomc.appeals.mapper.PhotosMapper">
+
+    <resultMap id="BaseResultMap" type="net.kinomc.appeals.model.entity.Photos">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+        <result property="data" column="data" jdbcType="VARCHAR"/>
+        <result property="md5" column="md5" jdbcType="VARCHAR"/>
+        <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uuid,data,md5,createTime,isDelete
+    </sql>
+</mapper>

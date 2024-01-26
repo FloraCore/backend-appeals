@@ -1,0 +1,73 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  application:
+    name: appeals
+  # 默认 dev 环境
+  # 编译后请注释
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 50MB  # 上传文件总的最大值 默认10MB
+      max-file-size: 10MB
+  # 数据库配置
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/appeal?serverTimezone=UTC%2B8
+          username: appeal
+          password: "123456"
+        litebans:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/litebans?serverTimezone=UTC%2B8
+          username: litebans
+          password: "123456"
+        luckperms:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/luckperms?serverTimezone=UTC%2B8
+          username: luckperms
+          password: "123456"
+        floracore:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/floracore?serverTimezone=UTC%2B8
+          username: floracore
+          password: "123456"
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+server:
+  address: 0.0.0.0
+  port: 8102
+  servlet:
+    context-path: /api
+    # session 30 天过期
+    session:
+      timeout: "P30D"
+      cookie:
+        same-site: none
+        secure: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值（默认为 1）
+      logic-not-delete-value: 0 # 逻辑未删除值（默认为 0）
+web:
+  server-name: "KinoMC"
+  address: "appeal.kinomc.net"
+  icp:
+    information: "ICP备案号"
+    code: "123456789"
+  ip138:
+    token: "token"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.kinomc.appeals.mapper.AppealPunishMapper">
+
+    <resultMap id="BaseResultMap" type="net.kinomc.appeals.model.entity.AppealPunish">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="punishInfo" column="punishInfo" jdbcType="BIGINT"/>
+        <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+        <result property="userName" column="userName" jdbcType="VARCHAR"/>
+        <result property="userEmail" column="userEmail" jdbcType="VARCHAR"/>
+        <result property="appealReason" column="appealReason" jdbcType="VARCHAR"/>
+        <result property="photos" column="photos" jdbcType="VARCHAR"/>
+        <result property="assignee" column="assignee" jdbcType="BIGINT"/>
+        <result property="processingTime" column="processingTime" jdbcType="TIMESTAMP"/>
+        <result property="conclusion" column="conclusion" jdbcType="TINYINT"/>
+        <result property="conclusionReason" column="conclusionReason" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,punishInfo,uuid,userName,userEmail,
+        appealReason,photos,assignee,
+        processingTime,state,conclusion,
+        conclusionReason,updateTime,isDelete
+    </sql>
+</mapper>

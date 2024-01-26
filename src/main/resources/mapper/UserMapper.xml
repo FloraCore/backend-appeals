@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.kinomc.appeals.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="net.kinomc.appeals.model.entity.User">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="userName" column="userName" jdbcType="VARCHAR"/>
+        <result property="userEmail" column="userEmail" jdbcType="VARCHAR"/>
+        <result property="userAvatar" column="userAvatar" jdbcType="VARCHAR"/>
+        <result property="userGender" column="userGender" jdbcType="TINYINT"/>
+        <result property="userPosition" column="userPosition" jdbcType="VARCHAR"/>
+        <result property="userRole" column="userRole" jdbcType="VARCHAR"/>
+        <result property="userPassword" column="userPassword" jdbcType="VARCHAR"/>
+        <result property="userKey" column="userKey" jdbcType="VARCHAR"/>
+        <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isBaned" column="isBaned" jdbcType="TINYINT"/>
+        <result property="acceptMail" column="acceptMail" jdbcType="TINYINT"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,userName,userEmail,
+        userAvatar,userGender,userRole,userPosition
+        userPassword,userKey,createTime,updateTime,
+        isBaned,acceptMail,isDelete
+    </sql>
+</mapper>

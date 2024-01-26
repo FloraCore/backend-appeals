@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.kinomc.appeals.mapper.MarkdownsMapper">
+
+    <resultMap id="BaseResultMap" type="net.kinomc.appeals.model.entity.Markdowns">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="uuid" column="uuid" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="TINYINT"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="creator" column="creator" jdbcType="BIGINT"/>
+        <result property="participant" column="participant" jdbcType="VARCHAR"/>
+        <result property="top" column="top" jdbcType="TINYINT"/>
+        <result property="enabled" column="enabled" jdbcType="TINYINT"/>
+        <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uuid,type,title,content,creator,participant,top,enabled,createTime,updateTime,isDelete
+    </sql>
+</mapper>
